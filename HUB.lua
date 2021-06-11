@@ -14,5 +14,7 @@ Main.Slider({Text = "WalkSpeed", Callback = function(value) game.Players.LocalPl
 Main.Slider({Text = "Jump Power", Callback = function(value) game.Players.LocalPlayer.Character.Humanoid.JumpPower = value end, Min = 50, Max = 150, Def = game.Players.LocalPlayer.Character.Humanoid.JumpPower})
 
 if game.PlaceId == 5346447287 then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/SeusW/SeusHub/main/TappingGod.lua"))()
+elseif game.PlaceId == 0 then
   
 end
