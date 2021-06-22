@@ -50,7 +50,11 @@ if game.PlaceId == 5346447287 then
   end,
   Options = {"1", "5", "10", "50", "100", "250", "500", "1k", "5k", "10k", "25k", "69k", "100k", "400k", "1m", "12m", "38m", "90m", "190m", "590m", "1.7b", "5.3b"}
   })
-elseif game.PlaceId == 0 then
+elseif game.PlaceId == 5827078246 then
+    local TG = UI.New({Title = "Coins Hero Simulator"})
 
+    TG.Toggle({Text = "Auto Collect", Callback = function(value) if AC == false then AC = true  else AC = false end while AC == true do wait() local args = {[1] = 1,} game:GetService("ReplicatedStorage").CoinToPlayer:FireServer(unpack(args)) end end, Enabled = false})
+    TG.Toggle({Text = "Auto Sell", Callback = function(value) if AS == false then AS = true else AS = false end while AS == true do wait(p) game:GetService("ReplicatedStorage").Remotes.Sell:FireServer() end end, Enabled = false})
+    TG.TextField({Text = "Time before sell",Callback = function(value) p = value end
+})
 end
-
